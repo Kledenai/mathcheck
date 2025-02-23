@@ -1,4 +1,4 @@
-import { ConvertToLatexResult, MathExpression } from "./types";
+import { MathExpression, ConvertToLatexResult } from "../types";
 import { validateExpression } from "./validator";
 
 export function convertToLatex({ expression }: MathExpression): ConvertToLatexResult {
@@ -21,14 +21,8 @@ export function convertToLatex({ expression }: MathExpression): ConvertToLatexRe
       .replace(/\s+/g, ' ')
       .trim();
 
-    return {
-      success: true,
-      latex,
-    };
+    return { success: true, latex };
   } catch {
-    return {
-      success: false,
-      error: 'Failed to convert the expression to LaTeX.',
-    };
+    return { success: false, error: 'Failed to convert the expression to LaTeX.' };
   }
 }

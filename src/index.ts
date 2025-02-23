@@ -1,3 +1,4 @@
-export { validateExpression } from './validator';
-export { simplifyExpression } from './simplifier';
-export { convertToLatex } from './latexConverter';
+export { validateExpression } from './core/validator';
+export { simplifyExpression } from './core/simplifier';
+export { convertToLatex } from './core/latexConverter';
+export * from './types';

@@ -1,4 +1,4 @@
-import { validateExpression } from '../src/validator';
+import { validateExpression } from '../../src/core/validator';
 
 describe('validateExpression', () => {
   it('should validate a correct mathematical expression', () => {

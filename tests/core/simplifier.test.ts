@@ -1,4 +1,4 @@
-import { simplifyExpression } from '../src/simplifier';
+import { simplifyExpression } from '../../src/core/simplifier';
 
 describe('simplifyExpression', () => {
   it('should simplify a valid mathematical expression', () => {

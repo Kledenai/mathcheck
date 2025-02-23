@@ -1,4 +1,4 @@
-import { convertToLatex } from '../src/latexConverter';
+import { convertToLatex } from '../../src/core/latexConverter';
 
 describe('convertToLatex', () => {
   it('should convert a valid mathematical expression to LaTeX', () => {

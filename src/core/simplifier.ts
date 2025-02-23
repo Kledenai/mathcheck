@@ -1,14 +1,11 @@
+import { MathExpression, SimplifyExpressionResult } from "../types";
 import { validateExpression } from "./validator";
-import { MathExpression, SimplifyExpressionResult } from "./types";
 
 export function simplifyExpression({ expression }: MathExpression): SimplifyExpressionResult {
   const validation = validateExpression({ expression });
 
   if (!validation.isValid) {
-    return {
-      success: false,
-      error: 'Invalid mathematical expression.',
-    };
+    return { success: false, error: 'Invalid mathematical expression.' };
   }
 
   try {
@@ -19,9 +16,6 @@ export function simplifyExpression({ expression }: MathExpression): SimplifyExpr
       return { success: false, error: "Result is not a valid number." };
     }
   } catch {
-    return {
-      success: false,
-      error: 'Failed to evaluate the expression.',
-    };
+    return { success: false, error: 'Failed to evaluate the expression.' };
   }
 }
