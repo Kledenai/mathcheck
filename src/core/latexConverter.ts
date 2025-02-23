@@ -1,8 +1,8 @@
 import { MathExpression, ConvertToLatexResult } from "../types";
 import { validateExpression } from "./validateExpression";
 
-export function convertToLatex({ expression }: MathExpression): ConvertToLatexResult {
-  const validation = validateExpression({ expression });
+export function convertToLatex(expression: MathExpression): ConvertToLatexResult {
+  const validation = validateExpression(expression);
 
   if (!validation.isValid) {
     return {

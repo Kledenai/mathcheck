@@ -1,6 +1,6 @@
-export interface MathExpression {
-  expression: string;
-}
+export type MathExpression = string;
+
+export type CreateMathCheckError = string;
 
 export interface ValidateExpressionResult {
   isValid: boolean;

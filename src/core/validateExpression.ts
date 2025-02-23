@@ -1,7 +1,7 @@
 import { MathExpression, ValidateExpressionResult } from "../types";
 import { isBalanced } from "../utils/expressionUtils";
 
-export function validateExpression({ expression }: MathExpression): ValidateExpressionResult {
+export function validateExpression(expression: MathExpression): ValidateExpressionResult {
   const validCharacters = /^[0-9+\-*/^().\s]+$/;
 
   if (expression.trim() === "") {
@@ -12,7 +12,7 @@ export function validateExpression({ expression }: MathExpression): ValidateExpr
     return { isValid: false, error: "Expression contains invalid characters." };
   }
 
-  if (!isBalanced({ expression: expression })) {
+  if (!isBalanced(expression)) {
     return { isValid: false, error: "Parentheses are not balanced." };
   }
 

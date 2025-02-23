@@ -1,3 +1,11 @@
+## [1.0.1] - 2025-02-23
+
+### Fixed
+
+- Replaced MathExpression from an interface to a type alias of string.
+  - Reason: Simplified usage by allowing mathematical expressions to be passed directly as a string instead of requiring an object.
+  - Benefit: Makes the code cleaner and more intuitive, enhancing flexibility when passing mathematical expressions.
+
 ## [1.0.0] - 2025-02-23
 
 ### Added

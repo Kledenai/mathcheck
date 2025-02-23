@@ -1,4 +1,6 @@
-[![npm version](https://img.shields.io/npm/v/mathcheck)](https://www.npmjs.com/package/mathcheck)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kledenai/mathcheck/ci.yml)](https://github.com/kledenai/mathcheck/actions)
+[![License](https://img.shields.io/npm/l/mathcheck)](https://github.com/kledenai/mathcheck/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/npm/dm/mathcheck)](https://www.npmjs.com/package/mathcheck)
 
 # MathCheck
 
@@ -41,30 +43,30 @@ import {
 ### Validating Mathematical Expressions
 
 ```typescript
-const validation = validateExpression({ expression: "(2 + 3) * 5" });
+const validation = validateExpression("(2 + 3) * 5");
 console.log(validation); // { isValid: true }
 ```
 
 ### Simplifying Expressions
 
 ```typescript
-const simplified = simplifyExpression({ expression: "2 + 3 * 5" });
+const simplified = simplifyExpression("2 + 3 * 5");
 console.log(simplified); // { success: true, result: 17 }
 ```
 
 ### Converting to LaTeX
 
 ```typescript
-const latex = convertToLatex({ expression: "(2 + 3) * 5" });
+const latex = convertToLatex("(2 + 3) * 5");
 console.log(latex); // { success: true, latex: '\\left(2 + 3\\right) \\cdot 5' }
 ```
 
 ## 📜 API
 
 ```typescript
-validateExpression({ expression: string }): ValidationResult
-simplifyExpression({ expression: string }): SimplificationResult
-convertToLatex({ expression: string }): LatexConversionResult
+validateExpression(expression: MathExpression): ValidationResult
+simplifyExpression(expression: MathExpression): SimplificationResult
+convertToLatex(expression: MathExpression): LatexConversionResult
 ```
 
 ### Types
@@ -93,4 +95,4 @@ Feel free to open issues or submit pull requests to improve MathCheck. All contr
 
 ## 💡 Author
 
-Created by Kledenai. Contact me at me@kledenai.com.
+Created by Kledenai. [me@kledenai.com](mailto:me@kledenai.com).

@@ -1,6 +1,6 @@
 import { MathExpression } from "../types";
 
-export function isBalanced({ expression }: MathExpression): boolean {
+export function isBalanced(expression: MathExpression): boolean {
   let stack = 0;
 
   for (const char of expression) {

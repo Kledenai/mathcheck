@@ -1,8 +1,8 @@
 import { MathExpression, SimplifyExpressionResult } from "../types";
 import { validateExpression } from "./validateExpression";
 
-export function simplifyExpression({ expression }: MathExpression): SimplifyExpressionResult {
-  const validation = validateExpression({ expression });
+export function simplifyExpression(expression: MathExpression): SimplifyExpressionResult {
+  const validation = validateExpression(expression);
 
   if (!validation.isValid) {
     return { success: false, error: 'Invalid mathematical expression.' };
