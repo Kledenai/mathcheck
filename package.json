@@ -1,6 +1,6 @@
 {
   "name": "mathcheck",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "type": "module",
   "description": "Validate math expressions in JavaScript and TypeScript. Fast, lightweight, and accurate.",
   "keywords": [
