@@ -1,5 +1,5 @@
 import { MathExpression, ConvertToLatexResult } from "../types";
-import { validateExpression } from "./validator";
+import { validateExpression } from "./validateExpression";
 
 export function convertToLatex({ expression }: MathExpression): ConvertToLatexResult {
   const validation = validateExpression({ expression });

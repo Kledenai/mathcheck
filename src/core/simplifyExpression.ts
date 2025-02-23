@@ -1,5 +1,5 @@
 import { MathExpression, SimplifyExpressionResult } from "../types";
-import { validateExpression } from "./validator";
+import { validateExpression } from "./validateExpression";
 
 export function simplifyExpression({ expression }: MathExpression): SimplifyExpressionResult {
   const validation = validateExpression({ expression });
