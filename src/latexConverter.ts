@@ -7,7 +7,7 @@ export function convertToLatex({ expression }: MathExpression): ConvertToLatexRe
   if (!validation.isValid) {
     return {
       success: false,
-      error: validation.error || "Invalid expression.",
+      error: validation.error || 'Invalid mathematical expression.',
     };
   }
 
@@ -16,8 +16,10 @@ export function convertToLatex({ expression }: MathExpression): ConvertToLatexRe
       .replace(/\*/g, ' \\cdot ')
       .replace(/\//g, ' \\div ')
       .replace(/\^/g, ' ^ ')
-      .replace(/\(/g, ' \\left(')
-      .replace(/\)/g, ' \\right)');
+      .replace(/\(/g, '\\left(')
+      .replace(/\)/g, '\\right)')
+      .replace(/\s+/g, ' ')
+      .trim();
 
     return {
       success: true,
@@ -26,7 +28,7 @@ export function convertToLatex({ expression }: MathExpression): ConvertToLatexRe
   } catch {
     return {
       success: false,
-      error: "Failed to convert the expression to LaTeX.",
+      error: 'Failed to convert the expression to LaTeX.',
     };
   }
 }

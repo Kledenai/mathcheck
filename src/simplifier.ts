@@ -7,21 +7,21 @@ export function simplifyExpression({ expression }: MathExpression): SimplifyExpr
   if (!validation.isValid) {
     return {
       success: false,
-      error: validation.error || "Invalid mathematical expression.",
+      error: 'Invalid mathematical expression.',
     };
   }
 
   try {
     const result = new Function(`return (${expression})`)();
-    if (typeof result === 'number') {
+    if (typeof result === 'number' && !isNaN(result)) {
       return { success: true, result };
     } else {
-      return { success: false, error: "Result is not a number." };
+      return { success: false, error: "Result is not a valid number." };
     }
   } catch {
     return {
       success: false,
-      error: "Failed to simplify the expression due to an evaluation error.",
+      error: 'Failed to evaluate the expression.',
     };
   }
 }
