@@ -1,3 +1,14 @@
+## [1.0.2] - 2025-02-24
+
+### Fixed
+
+- Resolved ESM/CommonJS compatibility issue:
+  - Updated tsconfig.json to use "module": "ESNext" instead of "CommonJS" for proper ESM support.
+  - Set "target": "ES2020" to enable modern JavaScript features.
+  - Enabled TypeScript declaration generation with "declaration": true.
+- Fixed export syntax in compiled JavaScript files:
+  - Ensured that TypeScript outputs proper ESM exports using export {} syntax instead of exports. object.
+
 ## [1.0.1] - 2025-02-23
 
 ### Fixed
