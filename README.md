@@ -1,3 +1,4 @@
+[![npm version](https://img.shields.io/npm/v/mathcheck)](https://www.npmjs.com/package/mathcheck)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/kledenai/mathcheck/ci.yml)](https://github.com/kledenai/mathcheck/actions)
 [![License](https://img.shields.io/npm/l/mathcheck)](https://github.com/kledenai/mathcheck/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/mathcheck)](https://www.npmjs.com/package/mathcheck)
