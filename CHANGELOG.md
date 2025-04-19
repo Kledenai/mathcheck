@@ -1,3 +1,21 @@
+# Changelog
+
+All notable changes to this project will be documented here.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
+
+## [1.0.3] - 2025-04-19
+
+### Fixed
+
+- Updated package.json to support both ESM and CJS using exports field and type: module.
+- Updated Jest config to support ESM with --experimental-vm-modules.
+- Adjusted tsconfig.json for compatibility with new build setup.
+- Migrated build system to tsup for faster and modern bundling.
+- Improved GitHub Actions workflow for release publishing.
+- Refactored core imports to use import type syntax.
+- New tsup.config.ts file.
+
 ## [1.0.2] - 2025-02-24
 
 ### Fixed
