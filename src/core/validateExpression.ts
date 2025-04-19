@@ -1,4 +1,4 @@
-import { MathExpression, ValidateExpressionResult } from "../types";
+import type { MathExpression, ValidateExpressionResult } from "../types";
 import { isBalanced } from "../utils/expressionUtils";
 
 export function validateExpression(expression: MathExpression): ValidateExpressionResult {

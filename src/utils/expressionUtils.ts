@@ -1,4 +1,4 @@
-import { MathExpression } from "../types";
+import type { MathExpression } from "../types";
 
 export function isBalanced(expression: MathExpression): boolean {
   let stack = 0;

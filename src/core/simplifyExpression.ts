@@ -1,4 +1,4 @@
-import { MathExpression, SimplifyExpressionResult } from "../types";
+import type { MathExpression, SimplifyExpressionResult } from "../types";
 import { validateExpression } from "./validateExpression";
 
 export function simplifyExpression(expression: MathExpression): SimplifyExpressionResult {

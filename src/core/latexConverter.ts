@@ -1,4 +1,4 @@
-import { MathExpression, ConvertToLatexResult } from "../types";
+import type { MathExpression, ConvertToLatexResult } from "../types";
 import { validateExpression } from "./validateExpression";
 
 export function convertToLatex(expression: MathExpression): ConvertToLatexResult {
