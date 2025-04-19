@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Cache npm dependencies
@@ -26,14 +26,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Run tests
-        run: npm test
-
-      - name: Build the project
-        run: npm run build
+        run: |
+          npm ci
+          npm test
 
       - name: Validate package version
         run: |
@@ -48,4 +44,6 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm
-        run: npm publish --access public --loglevel verbose
+        run: |
+          npm ci
+          npm publish --access public --loglevel verbose
